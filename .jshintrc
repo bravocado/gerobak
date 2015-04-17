@@ -20,5 +20,9 @@
 	"strict": true,
 	"trailing": true,
 	"undef": true,
-	"unused": true
+	"unused": true,
+  "globals": {
+    "jQuery": true,
+    "log": true
+  }
 }

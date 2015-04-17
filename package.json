@@ -9,7 +9,7 @@
     "javascript",
     "js"
   ],
-  "homepage": "",
+  "homepage": "http://github.com/bravocado/gerobak",
   "license": "MIT",
   "author": {
     "name": "Bravocado",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "bower": "1.x",
     "grunt": "^0.4.0",
+    "grunt-browser-sync": "^2.1.1",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-connect": "^0.9.0",
