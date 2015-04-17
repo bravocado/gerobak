@@ -23,6 +23,11 @@
 	"unused": true,
   "globals": {
     "jQuery": true,
-    "log": true
+    "log": true,
+    "basket": true,
+    "getUrl": true,
+    "saveUrl": true,
+    "RSVP": true,
+    "gerobak": true
   }
 }
