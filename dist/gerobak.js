@@ -1,6 +1,9 @@
-/*global basket, gerobak */
-
-(function( window, document ) {
+/*!
+* gerobak
+* v0.1.0 - 2015-04-18
+* http://github.com/bravocado/gerobak
+* (c) Bravocado;* Uses basket.js, https://github.com/addyosmani/basket.js
+*/(function( window, document ) {
 	'use strict';
 
 	var nameSpace = '[gerobak-load]';

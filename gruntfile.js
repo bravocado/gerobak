@@ -38,7 +38,7 @@ module.exports = function( grunt ) {
 					sourceMap: 'dist/gerobak.full.map'
 				},
 				files: {
-					'dist/gerobak.full.min.js': ['bower_components/rsvp/rsvp.min.js','bower_components/basket.js/dist/basket.js' , 'dist/gerobak.js']
+					'dist/gerobak.full.min.js': ['bower_components/rsvp/rsvp.min.js','bower_components/basket.js/dist/basket.js', 'node_modules/splitargs/splitargs.js', 'dist/gerobak.js']
 				}
 			}
 		},
