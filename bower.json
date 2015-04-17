@@ -1,0 +1,16 @@
+{
+  "name": "gerobak",
+  "main": "dist/basket.js",
+  "ignore": [
+    "_*",
+    ".*",
+    "lib",
+    "test",
+    "Gruntfile.js",
+    "index.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "basket": "latest"
+  }
+}
