@@ -16,7 +16,7 @@ Extending [basketjs](https://github.com/addyosmani/basket.js) to load scripts dy
 
 ## Customizing
 
-- You can customizing the data attribute by by passing the function `gerobak.attr('[your-data]');`.
+- You can customizing the data attribute by by passing the function `gerobak.docking('[your-data]');`.
 - Then you can use your own custom data as a identifier.
 
 
