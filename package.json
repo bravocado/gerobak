@@ -17,7 +17,7 @@
     "url": "http://bravocado.co"
   },
   "main": "lib/gerobak",
-  "repository": "bravocado/gerobakjs",
+  "repository": "bravocado/gerobak",
   "scripts": {
     "dev": "grunt",
     "test": "bower install && grunt test"
