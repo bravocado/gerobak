@@ -5,9 +5,6 @@ Extending [basketjs](https://github.com/addyosmani/basket.js) to load scripts dy
 
 ## How to use it
 
-
-## How to use it
-
 - Make sure you include the `rsvp.js` and `basket.js` or just use `gerobak.full.min.js`.
 - Put `gerobak-load="your/dir/to/script.js"` anywhere on your document.
 - Inital with `gerobak.docking();` when the DOM is ready.
