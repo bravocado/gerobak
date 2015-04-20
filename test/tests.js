@@ -1,7 +1,6 @@
-/*global console, test, ok*/
+/*global test, ok*/
 
 test('Values', function(){
 	'use strict';
 	ok(true, 'passes');
-	console.log(gerobak.attr());
 });

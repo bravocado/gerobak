@@ -1,6 +1,6 @@
 {
   "name": "gerobak",
-  "main": "dist/basket.js",
+  "main": "dist/gerobak.js",
   "ignore": [
     "_*",
     ".*",
