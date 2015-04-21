@@ -1,6 +1,6 @@
 /*!
 * gerobak
-* v0.1.0 - 2015-04-21
+* v0.1.4 - 2015-04-22
 * http://github.com/bravocado/gerobak
 * (c) Bravocado;* Uses basket.js, https://github.com/addyosmani/basket.js
 */(function( window, document ) {
@@ -61,10 +61,10 @@
 		return matchingElements;
 	};
 
-	var extractAttr = function() {
+	var extractAttr = function(arg) {
 		// initial variables
 		var attr = [],
-				matchingElements = getAttr()
+				matchingElements = getAttr(arg)
 		;
 		// 2 - spliting the comma and space
 		forEach(matchingElements, function (i) {
@@ -73,8 +73,8 @@
 		return attr;
 	};
 
-	var attrSlicer = function() {
-		var attr = extractAttr(),
+	var attrSlicer = function(arg) {
+		var attr = extractAttr(arg),
 				url = [],
 				opt = [],
 				obj = []
@@ -89,7 +89,7 @@
 		// slice the options
 		var opts = [],
 				optAttr = [],
-				emptyOpt = 'options:none'
+				emptyOpt = 'options:null'
 		;
 
 		// find the url
@@ -127,27 +127,34 @@
 		return obj;
 	};
 
-
 	window.gerobak = {
 
-		docking: function(arg) {
-			arg = arg || getAttr(arg);
-			forEach(arg, function (i) {
-				basket.require( attrSlicer()[i] );
-			});
+
+		docking: function(attribute, scripts, onFinish) {
+			// set default value
+			attribute = attribute || nameSpace;
+			// var urls = attrSlicer(attribute);
+
+			// on finish recrusive
+			if(scripts.length === 0) {
+					onFinish();
+					return;
+			}
+
+			var script = scripts[0];
+			scripts = scripts.slice(1);
+			// require the basket
+			basket.require(script).then(function() { gerobak.docking(attribute, scripts, onFinish); });
 		}
 
 	};
 
 	window.onload= function(){
 
-		// initial docking when the document ready
+		// initial docking when the DOM ready
 		basket.clear();
-		gerobak.docking();
-
+		gerobak.docking(nameSpace, attrSlicer());
 	};
 
 
 })( this, document );
-
-
