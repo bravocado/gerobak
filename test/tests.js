@@ -1,4 +1,4 @@
-/*global basket, console, test, ok*/
+/*global gerobak,basket, console, test, ok*/
 
 test('Values', function(){
 	'use strict';
