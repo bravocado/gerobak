@@ -4,11 +4,17 @@
 		<meta charset="utf-8">
 		<title>Tests</title>
 		<link rel="stylesheet" href="vendor/qunit.css">
-		<script src="../dist/gerobak.full.min.js"></script>
+		<script async defer src="../dist/gerobak.full.min.js"></script>
 	</head>
 	<body>
-		<div gerobak-load='fixtures/jquerybootstrap.js'></div>
-		<div class='test' id='anotherTest' gerobak-load='fixtures/index.js, skipCache:true'></div>
-		<div gerobak-load='fixtures/parent.js, skipCache:false'></div>
+		<div class="scriptComponent">
+			<script gerobak-load="fixtures/jquerybootstrap.js, skipCache:true"></script>
+			<script gerobak-load="fixtures/index.js, skipCache:true"></script>
+			<script gerobak-load="fixtures/parent.js, skipCache:true"></script>
+		</div>
+		<div class="container">
+			<div>..</div>
+			<div>..</div>
+		</div>
 	</body>
 </html>
