@@ -1,6 +1,6 @@
 /*!
 * gerobak
-* v0.1.4 - 2015-04-22
+* v0.1.4 - 2015-05-04
 * http://github.com/bravocado/gerobak
 * (c) Bravocado;* Uses basket.js, https://github.com/addyosmani/basket.js
 */(function( window, document ) {
@@ -97,7 +97,7 @@
 			data.push(urlOpt.concat(val[0]));
 		});
 		forEach(data, function(i, val) {
-			urlAttr.push(val.split(/:/));
+			urlAttr.push(val.split(/:(.+)?/));
 			// switch to object
 			forEach(urlAttr, function() {
 				url = toObject(urlAttr);
@@ -124,6 +124,7 @@
 			obj.push(merge(url[i], opt[i]));
 		});
 
+		console.log(obj);
 		return obj;
 	};
 
